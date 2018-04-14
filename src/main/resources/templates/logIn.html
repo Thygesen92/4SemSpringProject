@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="us">
+<head>
+    <meta charset="UTF-8"/>
+    <title>logIn</title>
+    <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
+</head>
+<body class="loginBody">
+    <div class="container" th:include="fragments/MasterPage :: navbar2"></div>
+<div class="loginDiv">
+    <form class="loginForm" method="Post" th:action="@{/login}">
+        <div class="imgcontainer">
+            <img src="https://en.opensuse.org/images/0/0b/Icon-user.png" width="150px" height="170px">
+        </div>
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" th:field="${member.username}" required/>
+
+            <label><b>Password</b></label>
+            <input type="text" th:field="${member.password}" required/>
+
+            <button type="submit" value="Login"> Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+    </form>
+</div>
+</body>
+</html>

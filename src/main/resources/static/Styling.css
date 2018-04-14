@@ -1,0 +1,588 @@
+
+/*MasterPage*/
+.navbar-nav {
+    position: fixed;
+    z-index:1;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    float: left;
+}
+
+.navbar-nav >.child {
+    color: limegreen;
+    margin-left: 48%;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+
+.active {
+    float: left;
+}
+
+.active .anchor {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 45px;
+    text-decoration: none;
+    padding-bottom: 18px;
+}
+
+.active .anchor:hover {
+    background-color: green;
+}
+
+.masternavbar {
+    padding: 16px;
+    width: 100%;
+}
+/*End of MasterPage*/
+
+
+
+/*Login Page*/
+.loginBody {
+    /*background-color: #f0f0f0;*/
+    background: url("pictures/download.jpg" )  no-repeat fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.loginForm {
+    margin-top: 7%;
+    position: relative;
+    height: 600px;
+    width: 600px;
+    background: url(https://i.imgur.com/3eP9Z4O.png) center no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border: #fff 15px solid;
+}
+
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+/*End of Login Page*/
+
+
+
+
+
+/*Start of Home Page*/
+
+.HomeClass {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("pictures/download.jpg" )  no-repeat fixed;
+    background-size: cover;
+}
+
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    margin-top: 30px;
+    float: left;
+    width: 30%;
+
+}
+
+.column2 {
+    margin-top: 30px;
+    float: left;
+
+}
+
+.column3 {
+    margin-top: 30px;
+    float: left;
+    width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.BottomText {
+    margin-top: 121px;
+    float: bottom;
+}
+
+.BottomProjectText {
+    float: bottom;
+}
+
+.div2 {
+    float: right;
+    margin: 13px;
+    padding: 13px;
+    border: 5px solid greenyellow;
+    width: 300px;
+    height: 260px;
+    color: #6cb44a;
+    border-radius: 4px;
+}
+
+.div3 {
+    float: right;
+    margin: 13px;
+    padding: 13px;
+    border: 5px solid greenyellow;
+    width: 300px;
+    height: 260px;
+    color: #6cb44a;
+    border-radius: 4px;
+}
+
+.div4 {
+    float: right;
+    margin: 13px;
+    padding: 13px;
+    border: 5px solid greenyellow;
+    width: 300px;
+    height: 260px;
+    color: #6cb44a;
+    border-radius: 4px;
+}
+
+.div5 {
+    float: right;
+    margin: 13px;
+    padding: 13px;
+    border: 5px solid greenyellow;
+    width: 300px;
+    height: 260px;
+    color: #6cb44a;
+    border-radius: 4px;
+}
+
+.imgProfile{
+    width: auto;
+    height: auto;
+    max-width: 80px;
+    max-height: 80px;
+    float: right;
+}
+
+.imgTour{
+    width: 100%;
+    height: 100%;
+    max-width: 298px;
+    max-height: 100px;
+}
+
+.AforHome {
+    float: bottom;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.openTourBTN {
+    float: bottom;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.div-tour-tittle{
+    color: #6cb44a;
+    line-height: 25px;
+    padding: 16px 16px 65px 16px;
+    font-weight: bold;
+    font-size: 12px;
+    max-height: 30px;
+    overflow: hidden;
+
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/*End of HomePage*/
+
+
+
+
+/*Start of Tour Page*/
+.tourBody {
+    background-color: #f0f0f0;
+}
+
+.TourCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    float: right;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.ViewProfile {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.Mark {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.ViewProfile:hover, a:hover {
+    opacity: 0.7;
+}
+
+.Rating{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 93.5%;
+    font-size: 18px;
+}
+
+.checked {
+    color: Green;
+}
+
+/*End of Tour Page*/
+
+
+
+
+
+/*Sign Up*/
+
+.SignUpBody{
+    background-color:#f0f0f0;
+    font-family:helvetica;
+}
+
+#bg{
+    position:relative;
+    top:20px;
+    height:600px;
+    width:800px;
+    background:url('https://i.imgur.com/3eP9Z4O.png') center no-repeat;
+    background-size:cover;
+    margin-left:auto;
+    margin-right:auto;
+    border:#fff 15px solid;
+    height: 800px;
+
+}
+
+.module{
+    position:relative;
+    top:15%;
+    height:70%;
+    width:450px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:5px;
+    background:RGBA(255,255,255,1);
+    -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+    box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+    height: 700px;
+    top: 50px;
+
+
+}
+
+.module .SignUpUI{
+    list-style-type:none;
+    margin:0;
+}
+
+.tab{
+    float:left;
+    height:60px;
+    width:25%;
+    padding-top:20px;
+    box-sizing:border-box;
+    background:#eeeeee;
+    text-align:center;
+    cursor:pointer;
+    transition:background .4s;
+}
+
+.tab:first-child{
+    -webkit-border-radius: 5px 0px 0px 0px;
+    border-radius: 5px 0px 0px 0px;
+}
+
+.tab:last-child{
+    -webkit-border-radius: 0px 5px 0px 0px;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.tab:hover{
+    background-color:rgba(0,0,0,.1);
+}
+
+.activeTab{
+    background:#fff;
+}
+
+.activeTab .icon{
+    opacity:1;
+}
+
+.icon{
+    height:24px;
+    width:24px;
+    opacity:.2;
+}
+
+.SignUpForm{
+    float:left;
+    height:86%;
+    width:100%;
+    box-sizing:border-box;
+    padding:40px;
+}
+
+.textbox{
+    height:50px;
+    width:100%;
+    border-radius:3px;
+    border:rgba(0,0,0,.3) 2px solid;
+    box-sizing:border-box;
+    padding:10px;
+    margin-bottom:30px;
+}
+
+.textbox:focus{
+    outline:none;
+    border:rgba(24,149,215,1) 2px solid;
+    color:rgba(24,149,215,1);
+}
+
+.SignUpButton{
+    height:50px;
+    width:100%;
+    border-radius:3px;
+    border:rgba(0,0,0,.3) 0px solid;
+    box-sizing:border-box;
+    padding:10px;
+    margin-bottom:30px;
+    background:#90c843;
+    color:#FFF;
+    font-weight:bold;
+    font-size: 12pt;
+    transition:background .4s;
+    cursor:pointer;
+}
+
+.SignUpButton:hover{
+    background:#80b438;
+
+}
+
+/*Sign up End*/

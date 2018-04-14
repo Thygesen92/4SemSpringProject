@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
+</head>
+<body class="HomeClass">
+    <div class="container" th:include="fragments/MasterPage :: navbar2"></div>
+
+    <h2>List of tours to take part in</h2>
+
+    <h4>Click on a appealing tour for you</h4>
+
+    <div class="row">
+        <div class="column1">
+            <h2></h2>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:60%;">Country</th>
+                </tr>
+                <tr>
+                    <td>france</td>
+                </tr>
+                <tr>
+                    <td>Sweden</td>
+                </tr>
+                <tr>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Germany</td>
+                </tr>
+            </table>
+
+            <script>
+                function myFunction() {
+                    // Declare variables
+                    var input, filter, table, tr, td, i;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    // Loop through all table rows, and hide those who don't match the search query
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+            </script>
+        </div>
+        <div class="column2">
+            <h2></h2>
+
+        </div>
+        <div class="column3">
+            <h2></h2>
+            <div class ="div2">
+            <div class="divGuideContainer">
+            </div>
+            <img class="imgTour" src="https://vignette.wikia.nocookie.net/discworld/images/9/90/Tumblr_m56o1qoSqf1rog00uo1_1280.jpg/revision/latest?cb=20140104084246&path-prefix=ru">
+            <div class = "div-tour-tittle">
+                My Tour to the unknown parts of the galaxy
+
+            </div>
+            <div class="my_content_container" id="ViewModel">
+                <button class="openTourBTN" id="ViewButton" style="width: 144px;">Open tour</button>
+                <a class="AforHome" href="https://www.youtube.com/watch?v=ULeDlxa3gyc">Order Tour</a>
+            </div>
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Name of Tour</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the Modal Body</p>
+                        <p>Some other text...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("ViewButton");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+
+            <div class="div3">
+                <div class="divGuideContainer">
+                </div>
+                <img class="imgTour" src="https://www.fdm-travel.dk/sites/default/files/styles/square_1_4/public/images/hh-10/15_HI_Paris_Eiffeltaarnet_8.jpg?h=f0b00ec7&itok=NTNC4Y-z">
+                <div class = "div-tour-tittle">
+                    My Tour Paris, France
+
+                </div>
+                <div class="my_content_container" id="ViewModel2">
+                    <button class="openTourBTN" id="ViewButton2" style="width: 144px;">Open tour</button>
+                    <a class="AforHome" href="https://www.youtube.com/watch?v=ULeDlxa3gyc">Order Tour</a>
+                </div>
+
+                <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Name of Tour</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the Modal Body</p>
+                            <p>Some other text...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('myModal2');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("ViewButton2");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            </div>
+
+            <div class ="div4">
+                <div class="divGuideContainer">
+                </div>
+                <img class="imgTour" src="http://www.webster.edu/images/study-abroad/belgium/brussels_square.jpg">
+                <div class = "div-tour-tittle">
+                    My Tour around To bruxelles, Belgium
+
+                </div>
+                <div class="my_content_container" id="ViewMode3">
+                    <button class="openTourBTN" id="ViewButton3" style="width: 144px;">Open tour</button>
+                    <a class="AforHome" href="https://www.youtube.com/watch?v=ULeDlxa3gyc">Order Tour</a>
+                </div>
+
+                <div id="myModal3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Name of Tour</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the Modal Body</p>
+                            <p>Some other text...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('myModal3');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("ViewButton3");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            </div>
+
+            <div class ="div5">
+                <div class="divGuideContainer">
+                </div>
+                <img class="imgTour" src="https://bt.bmcdn.dk/media/cache/resolve/image_1240/image/5/57521/10750090-copenhagen-denmark.jpg">
+                <div class = "div-tour-tittle">
+                    My Tour to Copenhagen, its still cold as fuck
+
+                </div>
+                <div class="my_content_container" id="ViewModel4">
+                    <button class="openTourBTN" id="ViewButton4" style="width: 144px;">Open tour</button>
+                    <a class="AforHome" href="https://www.youtube.com/watch?v=ULeDlxa3gyc">Order Tour</a>
+                </div>
+
+                <div id="myModal4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Name of Tour</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the Modal Body</p>
+                            <p>Some other text...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('myModal4');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("ViewButton4");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="BottomText">This website has been illustrated by your friendly neighbourhood Spiderman</h4>
+
+    <h4 class="BottomProjectText">Spring 4.semester projekt</h4>
+
+</body>
+</html>

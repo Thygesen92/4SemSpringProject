@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MasterPage</title>
+
+    <link th:fragment="navigation" rel="stylesheet" type="text/css" th:href="Styling.css"/>
+</head>
+<body class="MasterpageBody">
+<div class="masterContainer" th:fragment="navbar2">
+    <nav class="masternavbar">
+        <ul class="nav navbar-nav" >
+
+            <li class="active"><a class="anchor" th:href="@{/home}">Home</a></li>
+            <li class="active"><a class="anchor" href="about.asp">About</a></li>
+
+
+            <!--Elements float right on navbar.-->
+            <li style="float: right" class="active"><a class="anchor" th:href="@{/signup}">Sign Up</a></li>
+            <li style="float: right" class="active"><a class="anchor" th:href="@{/login}">Login</a></li>
+            <li style="float:right" class="active"><a class="anchor" th:href="@{/guidesignup}">GuideSignUp</a></li>
+            <style>
+                h2.child{
+                    color: limegreen;
+
+                    margin-top: 8px;
+                    margin-bottom: 14px;
+                }
+            </style>
+            <!--Company name-->
+            <h2 style="margin-left: 46.7%;" class="child" >LocalTravel</h2 >
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
