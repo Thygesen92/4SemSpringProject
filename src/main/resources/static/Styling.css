@@ -50,12 +50,12 @@
 
 /*Login Page*/
 .loginBody {
-    /*background-color: #f0f0f0;*/
-    background: url("pictures/Paris.jpeg" )  no-repeat fixed ;
+    background-color: #f0f0f0;
+   /* background: url("../pictures/Paris.jpeg" )  no-repeat fixed ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 .loginForm {
@@ -148,12 +148,14 @@ span.psw {
 
 .HomeClass {
     font-family: Arial, Helvetica, sans-serif;
-    background: url("pictures/download.jpg" )  no-repeat fixed;
+    background: url("pictures/Paris.jpeg" )  no-repeat fixed;
     background-size: cover;
+
+
 }
 
 #myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    /*background-image: url('/css/searchicon.png'); !* Add a search icon to input *!*/
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 100%; /* Full-width */
