@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+
 @Service
 public class ModelImp implements ModelService {
 
@@ -21,6 +24,28 @@ public class ModelImp implements ModelService {
         repoImp.insert(member);
         System.out.println(member.toString());
 
+    }
+
+    @Override
+    public boolean memberLogin(Member member) {
+
+        String u = member.getUsername();
+        String p = member.getPassword();
+        List<String> userCredential = repoImp.login(u,p);
+        System.out.println(userCredential.toString());
+
+        String userCredentialUsername = userCredential.get(0);
+        String userCredentialPassword = userCredential.get(1);
+
+        if (u.equals(userCredentialUsername))
+        {
+            if (p.equals(userCredentialPassword))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override

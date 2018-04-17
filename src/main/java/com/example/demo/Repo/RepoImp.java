@@ -5,8 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Repository;
 import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Repository
 public class RepoImp implements Repo {
@@ -17,7 +23,6 @@ public class RepoImp implements Repo {
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -40,5 +45,28 @@ public class RepoImp implements Repo {
                 member.getPassword(),
                 member.getAge()
         });
+    }
+
+    public List<String> login(String uname, String pword){
+
+        String sql = "SELECT * FROM members Where username = '" + uname +"' And password = '" + pword+"'";;
+        List<String> memberInfo = new ArrayList<String>();
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        jdbcTemplate.query(sql, new ResultSetExtractor<List>() {
+                    public List extractData(ResultSet rs) throws SQLException {
+
+                        while (rs.next()) {
+                            String name = rs.getString("username");
+                            memberInfo.add(name);
+                            String password = rs.getString("password");
+                            memberInfo.add(password);
+                        }
+                        System.out.println(memberInfo.toString());
+                        return memberInfo;
+                    }
+                }
+        );
+
+        return memberInfo;
     }
 }

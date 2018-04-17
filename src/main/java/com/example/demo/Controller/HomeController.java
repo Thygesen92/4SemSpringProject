@@ -42,13 +42,12 @@ public class HomeController {
         System.out.println(member.toStringUsername());
         log.info("User tried to login");
 
-
-        /*Need to check in database*/
-      /*  if (userModel.login(guide) == true){
-            log.info("Login succesful");
+        if (modelImp.memberLogin(member) == true)
+        {
+            log.info("Login Succesful");
             return "home";
+        }
 
-        }*/
         log.info("Login failed");
         return "login";
     }

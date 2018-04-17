@@ -7,5 +7,7 @@ public interface ModelService {
 
     void addAMember(Member member);
 
+    boolean memberLogin(Member member);
+
     void deleteAMember();
 }
