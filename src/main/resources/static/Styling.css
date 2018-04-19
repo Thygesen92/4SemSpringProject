@@ -44,6 +44,10 @@
     padding: 16px;
     width: 100%;
 }
+
+.siteFooter {
+    align-content: center;
+}
 /*End of MasterPage*/
 
 
@@ -148,7 +152,7 @@ span.psw {
 
 .HomeClass {
     font-family: Arial, Helvetica, sans-serif;
-    background: url("pictures/download.jpg" )  no-repeat fixed;
+    background: url("pictures/New_York.jpeg" )  no-repeat fixed;
     background-size: cover;
 }
 
