@@ -29,26 +29,20 @@
 
 .active .anchor {
     display: block;
-    color: limegreen;
+    color: white;
     text-align: center;
     padding: 14px 45px;
     text-decoration: none;
     padding-bottom: 18px;
-
 }
 
 .active .anchor:hover {
     background-color: green;
 }
 
-
 .masternavbar {
     padding: 16px;
     width: 100%;
-}
-
-.siteFooter {
-    align-content: center;
 }
 /*End of MasterPage*/
 
@@ -56,8 +50,8 @@
 
 /*Login Page*/
 .loginBody {
-    /*background-color: #f0f0f0;*/
-    background: url("Paris.jpeg" )  no-repeat fixed ;
+  /*  background-color: #f0f0f0;*/
+    background: url("New_York.jpeg" )  no-repeat fixed ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -154,8 +148,10 @@ span.psw {
 
 .HomeClass {
     font-family: Arial, Helvetica, sans-serif;
-    background: url("New_York.jpeg")  no-repeat fixed;
+    background: url("https://wallpaperscraft.com/image/paris_eiffel_tower_dawn_city_59234_1920x1080.jpg" )  no-repeat fixed;
     background-size: cover;
+
+
 }
 
 #myInput {
@@ -167,10 +163,6 @@ span.psw {
     padding: 12px 20px 12px 40px; /* Add some padding */
     border: 1px solid #ddd; /* Add a grey border */
     margin-bottom: 12px; /* Add some space below the input */
-}
-
-.h2home {
-    margin-top: 8px;
 }
 
 #myTable {
@@ -197,20 +189,20 @@ span.psw {
 
 /* Create two equal columns that floats next to each other */
 .column1 {
-    margin-top: 5px;
+    margin-top: 30px;
     float: left;
     width: 30%;
 
 }
 
 .column2 {
-    margin-top: 5px;
+    margin-top: 30px;
     float: left;
 
 }
 
 .column3 {
-    margin-top: 5px;
+    margin-top: 30px;
     float: left;
     width: 60%;
 }
@@ -232,51 +224,50 @@ span.psw {
 }
 
 .div2 {
-    background-color:#f0f0f0 ;
-    color: limegreen;
+    background: ghostwhite;
     float: right;
     margin: 13px;
     padding: 13px;
     border: 5px solid greenyellow;
     width: 300px;
     height: 260px;
+    color: #6cb44a;
     border-radius: 4px;
 }
 
 .div3 {
-    background-color:#f0f0f0 ;
-    color: limegreen;
+    background: ghostwhite;
     float: right;
     margin: 13px;
     padding: 13px;
     border: 5px solid greenyellow;
     width: 300px;
     height: 260px;
+    color: #6cb44a;
     border-radius: 4px;
 }
 
 .div4 {
-    background-color:#f0f0f0 ;
-    color: limegreen;
+    background: ghostwhite;
     float: right;
     margin: 13px;
     padding: 13px;
-    border: 5px solid greenyellow;
+    border: 5px solid limegreen;
     width: 300px;
     height: 260px;
-
+    color: #6cb44a;
     border-radius: 4px;
 }
 
 .div5 {
-    background-color:#f0f0f0 ;
-    color: limegreen;
+    background: ghostwhite;
     float: right;
     margin: 13px;
     padding: 13px;
     border: 5px solid greenyellow;
     width: 300px;
     height: 260px;
+    color: #6cb44a;
     border-radius: 4px;
 }
 
