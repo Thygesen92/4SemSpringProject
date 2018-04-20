@@ -11,8 +11,7 @@
     <nav class="masternavbar">
         <ul class="nav navbar-nav" >
 
-            <li class="active"><a class="anchor" th:href="@{/home}">Home</a></li>
-            <li class="active"><a class="anchor" href="about.asp">About</a></li>
+            <li class="active"><a class="anchor" th:href="@{/home}">LocalTravel</a></li>
 
             <!--Elements float right on navbar.-->
             <li style="float: right" class="active"><a class="anchor" th:href="@{/signup}">Sign Up</a></li>
@@ -28,6 +27,14 @@
             <h2 style="margin-left: 46.7%;" class="child" >LocalTravel</h2 >
         </ul>
     </nav>
+</div>
+
+<div class="siteFooter" th:fragment="footer">
+    <h4 class="BottomText">This website has been illustrated by your friendly neighbourhood Spiderman</h4>
+
+    <h4 class="BottomProjectText">Spring 4.semester projekt</h4>
+    <a th:href="@{/about}">About us</a>
+
 </div>
 </body>
 </html>
