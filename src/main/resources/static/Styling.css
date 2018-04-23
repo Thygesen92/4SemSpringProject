@@ -57,7 +57,7 @@
 /*Login Page*/
 .loginBody {
     /*background-color: #f0f0f0;*/
-    background: url("Paris.jpeg" )  no-repeat fixed ;
+    background: url("Paris.jpeg")  no-repeat fixed ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -233,11 +233,10 @@ span.psw {
 
 .div2 {
     background-color:#f0f0f0 ;
-    color: limegreen;
     float: right;
     margin: 13px;
     padding: 13px;
-    border: 5px solid greenyellow;
+    border: 5px solid limegreen;
     width: 300px;
     height: 260px;
     border-radius: 4px;
@@ -249,7 +248,7 @@ span.psw {
     float: right;
     margin: 13px;
     padding: 13px;
-    border: 5px solid greenyellow;
+    border: 5px solid limegreen;
     width: 300px;
     height: 260px;
     border-radius: 4px;
@@ -261,7 +260,7 @@ span.psw {
     float: right;
     margin: 13px;
     padding: 13px;
-    border: 5px solid greenyellow;
+    border: 5px solid limegreen;
     width: 300px;
     height: 260px;
 
@@ -274,7 +273,7 @@ span.psw {
     float: right;
     margin: 13px;
     padding: 13px;
-    border: 5px solid greenyellow;
+    border: 5px solid limegreen;
     width: 300px;
     height: 260px;
     border-radius: 4px;
