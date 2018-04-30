@@ -70,6 +70,16 @@
     border: #fff 15px solid;
 }
 
+.Login-Error {
+    margin: 6px;
+    height: 60px;
+    width: 600px;
+    border: #fff 15px solid;
+    background-color: #f44336;
+
+
+}
+
 
 /* Bordered form */
 form {

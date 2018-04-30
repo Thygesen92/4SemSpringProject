@@ -42,14 +42,24 @@ public class HomeController {
         System.out.println(member.toStringUsername());
         log.info("User tried to login");
 
-        if (modelImp.memberLogin(member) == true)
+        try
         {
-            log.info("Login Succesful");
-            return "home";
+            if (modelImp.memberLogin(member) == true)
+            {
+                log.info("Login Succesful");
+                return "home";
+            }
+        }
+        catch (Exception e)
+        {
+            model.addAttribute("Error", "Your username and/or password is invalied");
+            log.info("Login Failed");
+            return "login";
         }
 
         log.info("Login failed");
         return "login";
+
     }
 
     @GetMapping("/tour")
