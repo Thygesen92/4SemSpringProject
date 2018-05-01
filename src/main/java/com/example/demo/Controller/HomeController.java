@@ -1,7 +1,6 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Service.Member;
-import com.example.demo.Service.ModelImp;
 import com.example.demo.Service.ModelService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +31,7 @@ public class HomeController {
     public String logIn(Model model) {
         log.info("Login site entered");
         model.addAttribute("member", new Member());
-        return "logIn";
+        return "login";
     }
 
 
@@ -81,6 +80,8 @@ public class HomeController {
 
     @GetMapping(value = {"/", "home"})
     public String index(Model model) throws SQLException {
+
+        // VI skal loade tours herfra før vi returner et view
         return "home";
     }
 
