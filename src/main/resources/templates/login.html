@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="us">
 <head>
     <meta charset="UTF-8"/>
-    <title>logIn</title>
+    <title>login</title>
     <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
 </head>
 <body class="loginBody">
-    <div class="container" th:include="fragments/MasterPage :: navbar2"></div>
+
 <div class="loginDiv">
     <form class="loginForm" method="Post" th:action="@{/login}">
         <div class="imgcontainer">
@@ -25,11 +25,11 @@
             </label>
         </div>
     </form>
-    <div th:if = "${}">
+    <!--<div th:if = "${}">
         <div class="Login-Error">
             Incorrect Username or Password!
         </div>
-    </div>
+    </div>-->
 </div>
     <div th:include="fragments/MasterPage :: footer"></div>
 </body>
