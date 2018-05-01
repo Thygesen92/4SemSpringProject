@@ -11,6 +11,7 @@ public class Member {
     private String country;
     private String address;
     private String zipcode;
+    private int role;
     private int KontoNr;
     private int RegNr;
     private int AccountBalance = 0;
@@ -18,7 +19,7 @@ public class Member {
 
     public Member(){}
 
-    public Member(int ID, String firstName, String lastname, String username, String password, int age, String email, String country, String address, String zipcode) {
+    public Member(int ID, String firstName, String lastname, String username, String password, int age, String email, String country, String address, String zipcode, int role) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastname = lastname;
@@ -29,6 +30,7 @@ public class Member {
         this.country = country;
         this.address = address;
         this.zipcode = zipcode;
+        this.role = role;
     }
 
     public int getID() {
@@ -91,9 +93,15 @@ public class Member {
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
+    public int getRole(){
+        return role;
+    }
+    public void setRole(int role){
+        this.role = role;
+    }
     public String toString()
     {
-        return "Firstname = " + firstName +  " Lastname = " +  lastname + " Age = " + age + " Email = " + email + " Country = " + country + " Zipcode = " + zipcode + " Address = " + address;
+        return "Firstname = " + firstName +  " Lastname = " +  lastname + " Age = " + age + " Email = " + email + " Country = " + country + " Zipcode = " + zipcode + " Role = "+ role + " Address = " + address;
     }
 
     public String toStringUsername(){

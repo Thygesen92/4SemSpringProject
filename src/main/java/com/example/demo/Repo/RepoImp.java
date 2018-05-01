@@ -32,7 +32,7 @@ public class RepoImp implements Repo {
 
         log.info("Insert guide method entered");
 
-        String sql = "INSERT INTO members " + "(firstname, lastname, username, password, age) VALUES (?, ?,?,?,?)";
+        String sql = "INSERT INTO members " + "(firstname, lastname, username, password, age, role, country, zipcode,address) VALUES (?, ?,?,?,?,?,?,?,?)";
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
@@ -43,7 +43,11 @@ public class RepoImp implements Repo {
                 member.getLastname(),
                 member.getUsername(),
                 member.getPassword(),
-                member.getAge()
+                member.getAge(),
+                member.getRole(),
+                member.getCountry(),
+                member.getZipcode(),
+                member.getAddress()
         });
     }
 
