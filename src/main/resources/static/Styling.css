@@ -181,6 +181,7 @@ span.psw {
 
 .h2home {
     margin-top: 8px;
+    margin-bottom: 0%;
 }
 
 #myTable {
@@ -620,27 +621,3 @@ span.psw {
 }
 
 /*Sign up End*/
-
-/*Guide page start*/
-
-.columnGude1 {
-    margin-top: 5px;
-    float: left;
-    width: 70%;
-
-}
-
-.columnGuide2 {
-    margin-top: 5px;
-    float: left;
-    width: 30%;
-}
-
-/* Clear floats after the columns */
-.rowGuide:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/*Guide page end*/
