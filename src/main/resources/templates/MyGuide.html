@@ -7,15 +7,20 @@
     <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
 </head>
 <body class="GuideClass">
-    <div class="container" th:include="fragments/MasterPage :: navbar2"></div>
+    <div class="container" th:include="fragments/MasterPage :: navbarGuide"></div>
     <div class="rowGuide">
         <div class="columnGuide1">
-
+            <div class="containerGuide">
+                <h4>Here goes list of all the tours</h4>
+            </div>
         </div>
 
         <div class="columnGuide2">
-
+            <div class="containerGuide">
+                <h4>Here goes list of the guide's current most popular tours</h4>
+            </div>
         </div>
     </div>
+    <div th:include="fragments/MasterPage :: footer"></div>
 </body>
 </html>

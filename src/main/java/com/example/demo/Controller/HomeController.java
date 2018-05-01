@@ -46,7 +46,14 @@ public class HomeController {
             if (modelImp.memberLogin(member) == true)
             {
                 log.info("Login Succesful");
-                return "home";
+                if (member.getRole() == 1)
+                {
+                    return "home";
+                }
+                else
+                {
+                    return "MyGuide";
+                }
             }
         }
         catch (Exception e)
@@ -106,5 +113,13 @@ public class HomeController {
         log.info("member succesfully signed up");
         return "home";
 
+    }
+
+    @GetMapping("/MyGuide")
+    public String myGuide(Model model)
+    {
+        log.info("My Guide site entered");
+
+        return "MyGuide";
     }
 }

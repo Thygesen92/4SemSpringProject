@@ -1,7 +1,6 @@
 package com.example.demo.Repo;
 
 import com.example.demo.Service.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
