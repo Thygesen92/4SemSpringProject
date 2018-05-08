@@ -29,6 +29,19 @@
     </nav>
 </div>
 
+<div class="masterContainer" th:fragment="navbarGuide">
+    <nav class="masternavbar">
+        <ul class="nav navbar-nav" >
+
+            <li class="active"><a class="anchor" th:href="@{/home}">LocalTravel</a></li>
+
+            <!--Elements float right on navbar.-->
+            <li style="float: right" class="active"><a class="anchor">Profile info</a></li>
+            <li style="float: right" class="active"><a class="anchor">Guide name</a></li>
+        </ul>
+    </nav>
+</div>
+
 <div class="siteFooter" th:fragment="footer">
     <h4 class="BottomText">This website has been illustrated by your friendly neighbourhood Spiderman</h4>
 
