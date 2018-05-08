@@ -45,27 +45,14 @@ public class HomeController {
         System.out.println(member.toStringUsername());
         log.info("User tried to login");
 
-        try
-        {
+
             if (modelImp.memberLogin(member) == true)
             {
                 log.info("Login Succesful");
-                if (member.getRole() == 1)
-                {
+                    model.addAttribute("models" ,modelImp.isLoggedIn());
                     return "home";
-                }
-                else
-                {
-                    return "MyGuide";
-                }
             }
-        }
-        catch (Exception e)
-        {
-            model.addAttribute("Error", "Your username and/or password is invalied");
-            log.info("Login Failed");
-            return "login";
-        }
+
 
         log.info("Login failed");
         return "login";

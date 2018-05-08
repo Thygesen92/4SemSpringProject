@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
 </head>
 <body class="HomeClass">
-    <h1 class="HomepageCompanyName">Localtravel</h1>
+    <h1 class="HomepageCompanyName" th:unless="${#bools.isTrue(models)}">Localtravel</h1>
     <div th:include="fragments/MasterPage :: navbar2"></div>
     <h4 class="SignUpAndLogin" align="right"><a th:href="@{/signup}">SignUp</a> / <a th:href="@{/login}">Login</a></h4>
 

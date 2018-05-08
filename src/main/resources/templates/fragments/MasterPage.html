@@ -10,26 +10,20 @@
 <div class="masterContainer" th:fragment="navbar2">
     <nav class="masternavbar">
 
-        <ul class="nav navbar-nav">
-        <p>HELLO SHITTY WORLD!!</p>
-
-        </ul>
-
         <ul class="nav navbar-nav" th:if="${#bools.isTrue(models)}">
             <li class="active"><a class="anchor" th:href="@{/home}">LocalTravel</a></li>
 
             <!--Elements float right on navbar.-->
-            <li style="float: right" class="active"><a class="anchor" th:href="@{/signup}">Sign Up</a></li>
-            <li style="float: right" class="active"><a class="anchor" th:href="@{/login}">Login</a></li>
-            <style>
-                h2.child{
-                    color: limegreen;
-                    margin-top: 8px;
-                    margin-bottom: 14px;
-                }
-            </style>
-            <!--Company name-->
-            <h2 style="margin-left: 46.7%;" class="child" >LocalTravel</h2 >
+            <li style="float: right" class="active"><a class="anchor">Profile info</a></li>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
 
         </ul>
     </nav>
@@ -38,12 +32,7 @@
 <div class="masterContainer" th:fragment="navbarGuide">
     <nav class="masternavbar">
         <ul class="nav navbar-nav" >
-
-            <li class="active"><a class="anchor" th:href="@{/home}">LocalTravel</a></li>
-
             <!--Elements float right on navbar.-->
-            <li style="float: right" class="active"><a class="anchor">Profile info</a></li>
-            <li style="float: right" class="active"><a class="anchor">Guide name</a></li>
         </ul>
     </nav>
 </div>
@@ -55,5 +44,7 @@
     <a th:href="@{/about}">About us</a>
 
 </div>
+
+<script type="text/javascript" th:src="@{../../static/Scripts/MasterpageDropdown.js}"></script>
 </body>
 </html>
