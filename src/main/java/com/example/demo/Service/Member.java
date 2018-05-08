@@ -1,11 +1,14 @@
 package com.example.demo.Service;
 
+import javax.validation.constraints.Min;
+
 public class Member {
     private int ID = 2;
     private String firstName;
     private String lastname;
     private String username;
     private String password;
+    @Min(18)
     private int age;
     private String email;
     private String country;

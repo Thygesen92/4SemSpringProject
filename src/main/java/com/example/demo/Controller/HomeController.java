@@ -7,11 +7,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 
+import javax.validation.Valid;
 import java.sql.SQLException;
 
 @Controller
@@ -98,13 +100,19 @@ public class HomeController {
 
 
     @PostMapping("/signup")
-    public String signUp(@ModelAttribute Member member, Model model) {
+    public String signUp(@ModelAttribute @Valid Member member, BindingResult bindingResult, Model model) {
         log.info("member signing up");
 
-        modelImp.addAMember(member);
-
-        log.info("member succesfully signed up");
-        return "home";
-
+        if (bindingResult.hasErrors())
+        {
+            return "signUp";
+        }
+        if (modelImp.addAMember(member) == false)
+        {
+            log.info("member succesfully signed up");
+            return "home";
+        }
+        else
+            return "signup";
     }
 }

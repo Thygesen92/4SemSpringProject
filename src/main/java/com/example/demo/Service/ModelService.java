@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 
 public interface ModelService {
 
-    void addAMember(Member member);
+    boolean addAMember(Member member);
 
     boolean memberLogin(Member member);
+
+    boolean beforeRegister(Member member);
 
     void deleteAMember();
 }

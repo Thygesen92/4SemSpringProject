@@ -19,11 +19,15 @@ public class ModelImp implements ModelService {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Override
-    public void addAMember(Member member) {
+    public boolean addAMember(Member member) {
 
-        repoImp.insert(member);
-        System.out.println(member.toString());
-
+        if (beforeRegister(member) == false)
+        {
+            repoImp.insert(member);
+            System.out.println(member.toString());
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -46,6 +50,18 @@ public class ModelImp implements ModelService {
         }
 
         return false;
+    }
+
+    @Override
+    public boolean beforeRegister(Member member) {
+
+        if (repoImp.checkBeforeAddingMember(member) == false)
+        {
+            log.info("Member didn't allready exist");
+            return false;
+        }
+        log.info("Member allready exist!");
+        return true;
     }
 
     @Override
