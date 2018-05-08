@@ -1,6 +1,7 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Service.Member;
+import com.example.demo.Service.ModelImp;
 import com.example.demo.Service.ModelService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.sql.SQLException;
@@ -90,9 +92,13 @@ public class HomeController {
     @GetMapping(value = {"/", "home"})
     public String index(Model model) throws SQLException {
 
+        model.addAttribute("models" ,modelImp.isLoggedIn());
+
         // VI skal loade tours herfra før vi returner et view
         return "home";
     }
+
+
 
 
     @GetMapping("/signup")

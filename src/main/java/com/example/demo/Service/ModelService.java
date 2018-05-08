@@ -12,4 +12,6 @@ public interface ModelService {
     boolean beforeRegister(Member member);
 
     void deleteAMember();
+
+    boolean isLoggedIn();
 }

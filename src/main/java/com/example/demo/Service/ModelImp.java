@@ -16,6 +16,8 @@ public class ModelImp implements ModelService {
     @Autowired
     Repo repoImp;
 
+    private boolean loggedIn;
+
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Override
@@ -45,6 +47,7 @@ public class ModelImp implements ModelService {
         {
             if (p.equals(userCredentialPassword))
             {
+                loggedIn = true;
                 return true;
             }
         }
@@ -67,5 +70,15 @@ public class ModelImp implements ModelService {
     @Override
     public void deleteAMember() {
 
+    }
+
+    @Override
+    public boolean isLoggedIn() {
+
+        if (loggedIn == true)
+        {
+            return true;
+        }
+        return false;
     }
 }

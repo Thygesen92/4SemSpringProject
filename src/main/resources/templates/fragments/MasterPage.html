@@ -9,8 +9,13 @@
 <body class="MasterpageBody">
 <div class="masterContainer" th:fragment="navbar2">
     <nav class="masternavbar">
-        <ul class="nav navbar-nav" >
 
+        <ul class="nav navbar-nav">
+        <p>HELLO SHITTY WORLD!!</p>
+
+        </ul>
+
+        <ul class="nav navbar-nav" th:if="${#bools.isTrue(models)}">
             <li class="active"><a class="anchor" th:href="@{/home}">LocalTravel</a></li>
 
             <!--Elements float right on navbar.-->
@@ -25,6 +30,7 @@
             </style>
             <!--Company name-->
             <h2 style="margin-left: 46.7%;" class="child" >LocalTravel</h2 >
+
         </ul>
     </nav>
 </div>
