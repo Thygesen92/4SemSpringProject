@@ -2,6 +2,8 @@ package com.example.demo.Service;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 public interface ModelService {
 
@@ -14,4 +16,6 @@ public interface ModelService {
     void deleteAMember();
 
     boolean isLoggedIn();
+
+    List<Member> findmemberById();
 }

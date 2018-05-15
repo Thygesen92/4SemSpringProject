@@ -6,8 +6,19 @@
     <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
 </head>
 <body class="CreateTourBody">
-<div th:include="fragments/MasterPage :: navbar2"></div>
-<h1>Hello</h1>
-<div th:include="fragments/MasterPage :: footer"></div>
+    <div th:include="fragments/MasterPage :: navbar2"></div>
+    <div class="createTourModule">
+        <form class="createTourForm" method="Post" th:action="@{/signup}">
+
+        <!--Getting sign up information-->
+            <textarea autofocus required class="createtourTextArea" rows="10" cols="48" placeholder="Your tour description goes here"></textarea>
+
+
+
+
+        <input type="submit" value="Next" class="SignUpButton" />
+        </form>
+    </div>
+    <div th:include="fragments/MasterPage :: footer"></div>
 </body>
 </html>

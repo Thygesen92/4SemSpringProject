@@ -13,11 +13,10 @@
             <img src="https://en.opensuse.org/images/0/0b/Icon-user.png" width="150px" height="170px">
         </div>
         <div class="container">
-            <label><b>Username</b></label>
-            <input type="text" th:field="${member.username}" required/>
 
-            <label><b>Password</b></label>
-            <input type="text" th:field="${member.password}" required/>
+            <input type="text" th:field="${member.username}" placeholder="Username" required autofocus/>
+
+            <input type="text" th:field="${member.password}" placeholder="Password" required/>
 
             <button type="submit" value="Login"> Login</button>
             <label>

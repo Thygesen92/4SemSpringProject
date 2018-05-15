@@ -102,4 +102,11 @@ public class RepoImp implements Repo {
         }
         return true;
     }
+
+    @Override
+    public List<Member> findMemberById() {
+
+        /*HENTE MEDLEM I DATABASE*/
+        return null;
+    }
 }

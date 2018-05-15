@@ -81,4 +81,9 @@ public class ModelImp implements ModelService {
         }
         return false;
     }
+
+    @Override
+    public List<Member> findmemberById() {
+        return null;
+    }
 }

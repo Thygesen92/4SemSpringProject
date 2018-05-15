@@ -16,7 +16,7 @@
         <form class="SignUpForm" method="Post" th:action="@{/signup}">
 
             <!--Getting sign up information-->
-            <input type="text" placeholder="Firstname" th:field="${member.firstname}" required class="textbox"/>
+            <input type="text" placeholder="Firstname" th:field="${member.firstname}" required autofocus class="textbox"/>
             <input type="text" placeholder="Lastname"  th:field="${member.lastname}"  required class="textbox"/>
             <input type="text" placeholder="Username"  th:field="${member.username}"  required class="textbox"/>
             <input type="text" placeholder="Password"  th:field="${member.password}"  required class="textbox"/>

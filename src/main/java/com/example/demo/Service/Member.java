@@ -4,12 +4,11 @@ import javax.validation.constraints.Min;
 import java.util.List;
 
 public class Member {
-    private int ID = 2;
+    private int ID;
     private String firstName;
     private String lastname;
     private String username;
     private String password;
-    @Min(18)
     private int age;
     private String email;
     private String country;

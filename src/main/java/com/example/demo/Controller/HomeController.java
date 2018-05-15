@@ -43,6 +43,7 @@ public class HomeController {
             if (modelImp.memberLogin(member) == true)
             {
                 log.info("Login Succesful");
+                    model.addAttribute("member", modelImp.findmemberById());
                     model.addAttribute("models" ,modelImp.isLoggedIn());
                     return "home";
             }
@@ -60,12 +61,14 @@ public class HomeController {
     }
 
     @GetMapping("/about")
-    public String about() {
+    public String about(Model model, Member member) {
 
         // TEST PÅ RESTTemplate!! Skal køres samtidig med Demo!
         /*String forObject = restTemplate.getForObject("http://localhost:8081", String.class);
         log.info("test: " + forObject);*/
 
+        model.addAttribute("models" ,modelImp.isLoggedIn());
+        model.addAttribute("member", member);
 
         return "about";
     }
