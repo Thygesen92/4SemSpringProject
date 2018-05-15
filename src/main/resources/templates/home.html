@@ -8,8 +8,8 @@
 </head>
 <body class="HomeClass">
     <h1 class="HomepageCompanyName" th:unless="${#bools.isTrue(models)}">Localtravel</h1>
-    <div th:include="fragments/MasterPage :: navbar2"></div>
-    <h4 class="SignUpAndLogin" align="right"><a th:href="@{/signup}">SignUp</a> / <a th:href="@{/login}">Login</a></h4>
+    <div th:include="fragments/MasterPage :: navbar2" ></div>
+    <h4 th:if="${#bools.isFalse(models)}" class="SignUpAndLogin" align="right"><a th:href="@{/signup}">SignUp</a> / <a th:href="@{/login}">Login</a></h4>
 
     <h2 class="h2home">List of tours to take part in</h2>
 

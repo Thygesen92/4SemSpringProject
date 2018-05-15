@@ -123,4 +123,11 @@ public class HomeController {
 
         return "MyGuide";
     }
+
+
+    @GetMapping
+    public String createTour(Model model){
+        model.addAttribute("models" ,modelImp.isLoggedIn());
+        return "CreateTour";
+    }
 }

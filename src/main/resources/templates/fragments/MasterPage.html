@@ -9,23 +9,23 @@
 <body class="MasterpageBody">
 <div class="masterContainer" th:fragment="navbar2">
     <nav class="masternavbar">
+        <div th:if="${#bools.isTrue(models)}">
 
-        <ul class="nav navbar-nav" th:if="${#bools.isTrue(models)}">
-            <li class="active"><a class="anchor" th:href="@{/home}">LocalTravel</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
 
-            <!--Elements float right on navbar.-->
-            <li style="float: right" class="active"><a class="anchor">Profile info</a></li>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-
-
-        </ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/createTour}">Create tour</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li class="MParagraph"><p class="Masterdropdownname">Welcome </p></li>
+            </ul>
+        </div>
     </nav>
 </div>
 
@@ -44,7 +44,5 @@
     <a th:href="@{/about}">About us</a>
 
 </div>
-
-<script type="text/javascript" th:src="@{../../static/Scripts/MasterpageDropdown.js}"></script>
 </body>
 </html>
