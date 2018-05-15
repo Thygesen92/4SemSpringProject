@@ -104,9 +104,25 @@ public class RepoImp implements Repo {
     }
 
     @Override
-    public List<Member> findMemberById() {
+    public List<Integer> findMemberById(Member member) {
 
-        /*HENTE MEDLEM I DATABASE*/
-        return null;
+        String uname = member.getUsername();
+
+        String sql = "SELECT member_id FROM members Where username = " + uname;
+        List<Integer> memberID = new ArrayList<Integer>();
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        jdbcTemplate.query(sql, new ResultSetExtractor<List>()
+                {
+                    public List extractData(ResultSet rs) throws SQLException
+                    {
+                        while (rs.next()) {
+                            int id = rs.getInt("member_id");
+                            memberID.add(id);
+                        }
+                        System.out.println(memberID.toString());
+                        return memberID;
+                    }
+                });
+        return memberID;
     }
 }
