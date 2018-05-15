@@ -20,7 +20,9 @@
                         <a th:href="@{/createTour}">Create tour</a>
                     </div>
                 </li>
-                <li class="MParagraph"><p class="Masterdropdownname">Welcome </p></li>
+                <li class="MParagraph">
+                    <p class="Masterdropdownname">Welcome <a th:text="${member.getUsername()}"></a></p>
+                </li>
             </ul>
         </div>
     </nav>

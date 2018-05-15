@@ -1,6 +1,7 @@
 package com.example.demo.Service;
 
 import javax.validation.constraints.Min;
+import java.util.List;
 
 public class Member {
     private int ID = 2;
@@ -15,10 +16,7 @@ public class Member {
     private String address;
     private String zipcode;
     private int role;
-    private int KontoNr;
-    private int RegNr;
-    private int AccountBalance = 0;
-    private int Rating = 0; //between 1-5
+    private List<String> list = null;
 
     public Member(){}
 
@@ -105,6 +103,12 @@ public class Member {
     public String toString()
     {
         return "Firstname = " + firstName +  " Lastname = " +  lastname + " Age = " + age + " Email = " + email + " Country = " + country + " Zipcode = " + zipcode + " Role = "+ role + " Address = " + address;
+    }
+
+    public List<String> getList() { return list; }
+
+    public void setList(final List<String> list) {
+        this.list = list;
     }
 
     public String toStringUsername(){
