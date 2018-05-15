@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>home</title>
-    <link rel="stylesheet" type="text/css" th:href="Styling.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{Styling.css}"/>
 </head>
 <body class="HomeClass">
     <h1 class="HomepageCompanyName" th:unless="${#bools.isTrue(models)}">Localtravel</h1>

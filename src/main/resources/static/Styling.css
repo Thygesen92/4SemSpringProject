@@ -72,9 +72,6 @@ li.dropdown {
 .loginBody {
     /*background-color: #f0f0f0;*/
     background: url("Paris.jpeg")  no-repeat fixed ;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -640,11 +637,8 @@ span.psw {
 
 
 /*Start of CreateTour*/
-.createTourBody{
-    background: url("Great_Wall_of_China.jpeg")  no-repeat fixed ;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.CreateTourBody{
+    background: url("Great_Wall_of_China.jpeg") no-repeat;
     background-size: cover;
 }
 

@@ -130,9 +130,9 @@ public class HomeController {
     }
 
 
-    @GetMapping
+    @GetMapping("/createTour")
     public String createTour(Model model){
         model.addAttribute("models" ,modelImp.isLoggedIn());
-        return "CreateTour";
+        return "createTour";
     }
 }
