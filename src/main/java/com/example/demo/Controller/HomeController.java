@@ -1,7 +1,6 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Service.Member;
-import com.example.demo.Service.ModelImp;
 import com.example.demo.Service.ModelService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,16 +12,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 @Controller
 public class HomeController {
 
 
     RestTemplate restTemplate = new RestTemplate();
+    List<String> usernames = new LinkedList<>();
 
     @Autowired
     ModelService modelImp;
@@ -50,6 +51,8 @@ public class HomeController {
             {
                 log.info("Login Succesful");
                     model.addAttribute("models" ,modelImp.isLoggedIn());
+                    usernames.add(member.getUsername());
+                    System.out.println(usernames.toString());
                     return "home";
             }
 
@@ -77,9 +80,11 @@ public class HomeController {
     }
 
     @GetMapping(value = {"/", "home"})
-    public String index(Model model) throws SQLException {
+    public String index(Model model, Member member) throws SQLException {
 
+        log.info(usernames.toString());
         model.addAttribute("models" ,modelImp.isLoggedIn());
+        model.addAttribute("Users", usernames);
 
         // VI skal loade tours herfra før vi returner et view
         return "home";

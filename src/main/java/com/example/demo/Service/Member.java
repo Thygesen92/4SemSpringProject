@@ -111,4 +111,9 @@ public class Member {
         return "Username = " + username + " Password = " + password;
     }
 
+    public String usernameToString()
+    {
+        return username;
+    }
+
 }
