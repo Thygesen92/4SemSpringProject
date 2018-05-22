@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.swing.plaf.metal.MetalMenuBarUI;
 import javax.validation.Valid;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -21,6 +24,9 @@ public class HomeController {
 
     @Autowired
     ModelService modelImp;
+
+    public List<Member> loggedInMember;
+    private int id;
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -42,8 +48,12 @@ public class HomeController {
 
             if (modelImp.memberLogin(member) == true)
             {
+                loggedInMember = new ArrayList<Member>();
+                Member mem = modelImp.findByUsername(member);
+                loggedInMember.add(mem);
+                model.addAttribute(id);
                 log.info("Login Succesful");
-                    model.addAttribute("member", modelImp.findmemberById());
+                    model.addAttribute("members",loggedInMember);
                     model.addAttribute("models" ,modelImp.isLoggedIn());
                     return "home";
             }
@@ -77,7 +87,8 @@ public class HomeController {
     public String index(Model model, Member member) throws SQLException {
 
         model.addAttribute("models" ,modelImp.isLoggedIn());
-        model.addAttribute("member", member);
+        model.addAttribute("members", loggedInMember);
+        model.addAttribute("firstname" , member.getFirstname());
 
         // VI skal loade tours herfra før vi returner et view
         return "home";
@@ -124,9 +135,10 @@ public class HomeController {
 
 
     @GetMapping("/createTour")
-    public String createTour(Model model, Member member){
+    public String createTour(@ModelAttribute Member member,  Model model){
+        log.info("WHAT!!");
+        model.addAttribute("members" ,loggedInMember);
         model.addAttribute("models" ,modelImp.isLoggedIn());
-        model.addAttribute("member", member);
         return "createTour";
     }
 }

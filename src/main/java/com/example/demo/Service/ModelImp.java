@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -85,5 +86,38 @@ public class ModelImp implements ModelService {
     @Override
     public List<Member> findmemberById() {
         return null;
+    }
+
+    public Member findByUsername(Member member) {
+        String uname = member.getUsername();
+        List<String> memberInfo;
+        memberInfo = repoImp.findByUsername(uname);
+        int id = 0;
+        String firstname = null;
+        String lastname = null;
+        String username = null;
+        String country = null;
+        String address = null;
+
+
+
+        for (int i = 0; i < memberInfo.size() ; i++) {
+            switch (i){
+                case 0: id = Integer.parseInt(memberInfo.get(i));
+                    break;
+                case 1: firstname = memberInfo.get(i);
+                    break;
+                case 2: lastname = memberInfo.get(i);
+                    break;
+                case 3: username = memberInfo.get(i);
+                    break;
+                case 4: country = memberInfo.get(i);
+                    break;
+                case 5: address = memberInfo.get(i);
+            }
+        }
+
+        Member mem1 = new Member(id,firstname,lastname,username,country, address);
+        return mem1 ;
     }
 }

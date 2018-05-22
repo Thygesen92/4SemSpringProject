@@ -4,6 +4,8 @@ import javax.validation.constraints.Min;
 import java.util.List;
 
 public class Member {
+
+
     private int ID;
     private String firstName;
     private String lastname;
@@ -15,13 +17,13 @@ public class Member {
     private String address;
     private String zipcode;
     private int role;
-    private List<String> list = null;
+    /*private List<String> list = null;*/
 
     public Member(){}
 
-    public Member(int ID, String firstName, String lastname, String username, String password, int age, String email, String country, String address, String zipcode, int role) {
+    public Member(int ID, String firstname, String lastname, String username, String password, int age, String email, String country, String address, String zipcode, int role) {
         this.ID = ID;
-        this.firstName = firstName;
+        this.firstName = firstname;
         this.lastname = lastname;
         this.username = username;
         this.password = password;
@@ -31,6 +33,16 @@ public class Member {
         this.address = address;
         this.zipcode = zipcode;
         this.role = role;
+    }
+
+    public Member(int ID,String firstname,String lastname, String username, String country,String address){
+
+        this.ID = ID;
+        this.firstName = firstname;
+        this.lastname = lastname;
+        this.username = username;
+        this.country = country;
+        this.address = address;
     }
 
     public int getID() {
@@ -104,11 +116,11 @@ public class Member {
         return "Firstname = " + firstName +  " Lastname = " +  lastname + " Age = " + age + " Email = " + email + " Country = " + country + " Zipcode = " + zipcode + " Role = "+ role + " Address = " + address;
     }
 
-    public List<String> getList() { return list; }
+   /* public List<String> getList() { return list; }
 
     public void setList(final List<String> list) {
         this.list = list;
-    }
+    }*/
 
     public String toStringUsername(){
         return "Username = " + username + " Password = " + password;

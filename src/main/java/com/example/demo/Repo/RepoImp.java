@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class RepoImp implements Repo {
@@ -125,4 +126,37 @@ public class RepoImp implements Repo {
                 });
         return memberID;
     }
+
+    @Override
+    public List<String> findByUsername(String uname) {
+        String sql = "SELECT * FROM members Where username = '" + uname +"'";
+        List<String> mem = new ArrayList<String>();
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        jdbcTemplate.query(sql, new ResultSetExtractor<List>() {
+                    public List extractData(ResultSet rs) throws SQLException {
+                        while (rs.next()) {
+                            String id = rs.getString("id");
+                            String fName = rs.getString("firstname");
+                            String lName = rs.getString("lastname");
+                            String uname = rs.getString("username");
+                            String country = rs.getString("country");
+                            String zCode = rs.getString("zipcode");
+                            String address = rs.getString("address");
+                            mem.add(id);
+                            mem.add(fName);
+                            mem.add(lName);
+                            mem.add(uname);
+                            mem.add(country);
+                            mem.add(zCode);
+                            mem.add(address);
+                        }
+                        return mem;
+                    }
+
+                }
+        );
+        return mem;
+    }
+
+
 }

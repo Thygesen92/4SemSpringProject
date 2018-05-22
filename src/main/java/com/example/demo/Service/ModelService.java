@@ -18,4 +18,6 @@ public interface ModelService {
     boolean isLoggedIn();
 
     List<Member> findmemberById();
+
+    Member findByUsername(Member member);
 }
